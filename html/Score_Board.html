@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -177,23 +178,23 @@ clear:left;
         <tbody>
             <tr>
                 <td>1등</td>
-                <td>10000점</td>
-                <td>김준우대머리</td>
+                <td id="s_1"></td>
+                <td id="n_1"></td>
             </tr>
             <tr>
                 <td>2등</td>
-                <td>9000점</td>
-                <td>김준우탈모</td>
+                <td id="s_2"></td>
+                <td id="n_2"></td>
             </tr>
             <tr>
               <td>3등</td>
-              <td>8000점</td>
-              <td>김준우모발이식</td>
+              <td id="s_3"></td>
+              <td id="n_3"></td>
             </tr>
         </tbody>
     </table>
      <hr><hr>
-    <h3>＜Game 1 Scoreboard＞</h3>
+    <h3>＜Game 2 Scoreboard＞</h3>
     <table>
         <thead>
             <tr>
@@ -221,4 +222,14 @@ clear:left;
         </tbody>
     </table>
     <hr>
+
+    <script>
+            document.getElementById("s_1").innerHTML = localStorage.score1
+            document.getElementById("n_1").innerHTML = localStorage.name1
+            document.getElementById("s_2").innerHTML = localStorage.score2
+            document.getElementById("n_2").innerHTML = localStorage.name2
+            document.getElementById("s_3").innerHTML = localStorage.score3
+            document.getElementById("n_3").innerHTML = localStorage.name3
+
+        </script>
 </body>

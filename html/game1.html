@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -152,7 +153,6 @@ clear:left;
 
 
  <script>
- 
  var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
@@ -204,6 +204,30 @@ clear:left;
     document.addEventListener("click", onClickHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
 
+    function manage(score,name,count){
+
+     if(score > localStorage.getItem('score1')){
+      localStorage.setItem('score3',localStorage.score2);
+        localStorage.setItem('name3',localStorage.name2);
+        localStorage.setItem('score2',localStorage.score1);
+        localStorage.setItem('name2',localStorage.name1);
+        localStorage.setItem('score1',score);
+        localStorage.setItem('name1',name);
+  
+     }
+     else if(score>localStorage.getItem('score2')){
+        localStorage.setItem('score3',localStorage.score2);
+        localStorage.setItem('name3',localStorage.name2);
+        localStorage.setItem('score2',score);
+        localStorage.setItem('name2',name);
+     }
+     else if(score>localStorage.getItem('score3')){
+      localStorage.setItem('score3',score);
+        localStorage.setItem('name3',name);
+     }
+
+    }
+
     function keyDownHandler(e) {
       if(e.keyCode == 39) {
         rightPressed = true;
@@ -248,7 +272,11 @@ clear:left;
               b.status = 0;
               score++;
               if(score == brickRowCount*brickColumnCount) {
-                alert("YOU WIN, CONGRATULATIONS!");
+                alert("YOU WIN, CONGRATULATION!");
+                var name=window.prompt("Enter Your Nickname!");
+                localStorage.setItem('score',score);
+                localStorage.setItem('name',name);
+                manage(score,name)
                 document.location.reload();
               }
             }
@@ -327,7 +355,11 @@ clear:left;
             lives--;
             if(!lives){
               clearInterval(intervalId);
-              alert("Gameover");
+              var name=window.prompt("Enter Your Nickname");
+              alert(name,"score: ",score);
+              localStorage.setItem('score',score);
+              localStorage.setItem('name',name);
+              manage(score,name);
               document.location.reload();
             }
             else {
