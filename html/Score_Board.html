@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8" />
+    <title>minigame site-Score Board</title>
+    <style type="text/css">
+        a {
+            text-decoration: none
+        }
+    </style>
+    <style>
+        .menubar{
+clear:both;
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+background: #585858;
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: #585858;
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: #2E2E2E;
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: #585858;
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: #585858;
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: #2E2E2E;
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+    h3{
+      text-align:center;
+    }
+        table {
+            width: 100%;
+            margin-top: 5px;
+            text-align:center;
+            height:200px;
+            border-collapse: collapse;
+        }
+         thead tr {
+    background-color: #6E6E6E;
+    color: #ffffff;
+    height:40px;
+  }
+  tbody tr:nth-child(2n) {
+    background-color: #D8D8D8;
+  }
+  tbody tr:nth-child(2n+1) {
+    background-color: #BDBDBD;
+  }
+
+        body {
+            background-color: #f6f5ef;
+        }
+
+        #logo {
+            float: left;
+
+        }
+
+        #menu li {
+            display: inline;
+            text-decoration: none;
+        }
+
+        #control {
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="https://i.postimg.cc/wvLqgVT3/image.png" width="270">
+        </div>
+
+        <div class="menubar">
+            <ul>
+                <li><a href="/">How to play</a></li>
+                <li><a href="/" id="current">Products</a>
+                    <ul>
+                        <li><a href="/?id=game1.html">Game 1</a></li>
+                        <li><a href="/?id=game2.html">Game 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="/?id=Score_Board.html">Score Board</a></li>
+            </ul>
+        </div>
+    </header>
+    <hr>
+    <h3>＜Game 1 Scoreboard＞</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th>점수</th>
+                <th>닉네임</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1등</td>
+                <td>10000점</td>
+                <td>김준우대머리</td>
+            </tr>
+            <tr>
+                <td>2등</td>
+                <td>9000점</td>
+                <td>김준우탈모</td>
+            </tr>
+            <tr>
+              <td>3등</td>
+              <td>8000점</td>
+              <td>김준우모발이식</td>
+            </tr>
+        </tbody>
+    </table>
+     <hr><hr>
+    <h3>＜Game 1 Scoreboard＞</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th>점수</th>
+                <th>닉네임</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1등</td>
+                <td>10000점</td>
+                <td>김준우대머리</td>
+            </tr>
+            <tr>
+                <td>2등</td>
+                <td>9000점</td>
+                <td>김준우탈모</td>
+            </tr>
+            <tr>
+              <td>3등</td>
+              <td>8000점</td>
+              <td>김준우모발이식</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+</body>
